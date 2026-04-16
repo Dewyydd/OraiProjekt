@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +10,23 @@ namespace OraiProjekt
     internal class Data
     {
         public int id { get; set; }
-        public string marka { get; set; }
-        public string modell { get; set; }
-        public string kivitel { get; set; }
-        public int evjarat { get; set; }
-        public int teljesitmeny { get; set; }
-        public string uzemanyag { get; set; }
-        public int hengerurtartalom { get; set; }
-        public string sebessegvalto { get; set; }
-        public string hajtas { get; set; }
+        public string eloado { get; set; }
+        public string cim { get; set; }
+        public string megjelenes { get; set; }
+        public string platform { get; set; }
+        public int hossz { get; set; }
+        public string thumbnailkep { get; set; }
+        public string zenelink { get; set; }
         public Data(MySqlDataReader dataReader) 
         {
             id = Convert.ToInt32(dataReader["id"]);
-            marka = Convert.ToString(dataReader["marka"]);
-            modell = Convert.ToString(dataReader["modell"]);
-            kivitel = Convert.ToString(dataReader["kivitel"]);
-            evjarat = Convert.ToInt32(dataReader["evjarat"]);
-            teljesitmeny = Convert.ToInt32(dataReader["teljesitmeny"]);
-            uzemanyag = Convert.ToString(dataReader["uzemanyag"]);
-            hengerurtartalom = Convert.ToInt32(dataReader["hengerurtartalom"]);
-            sebessegvalto = Convert.ToString(dataReader["sebessegvalto"]);
-            hajtas = Convert.ToString(dataReader["hajtas"]);
+            eloado = Convert.ToString(dataReader["marka"]);
+            cim = Convert.ToString(dataReader["modell"]);
+            megjelenes = Convert.ToString(dataReader["kivitel"]);
+            platform = Convert.ToString(dataReader["evjarat"]);
+            hossz = Convert.ToInt32(dataReader["teljesitmeny"]);
+            thumbnailkep = Convert.ToString(dataReader["uzemanyag"]);
+            zenelink = Convert.ToString(dataReader["hengerurtartalom"]);
         }
     }
 }
